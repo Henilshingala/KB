@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Krishi Mitra AI | Chat{% endblock %}
+
+{% block content %}
+<main class="app">
+    <header class="header">
+        <div>
+            <h1>Krishi Mitra AI 🌱</h1>
+            <p>Your agricultural assistant</p>
+        </div>
+        <button id="clear-chat" class="clear-button" type="button">Clear chat</button>
+    </header>
+
+    <section id="chat-messages" class="messages" aria-live="polite">
+        <div class="message assistant">
+            <strong>Krishi Mitra AI</strong>
+            <p>Welcome! I am your agricultural assistant. How can I help you today?</p>
+        </div>
+    </section>
+
+    <form id="chat-form" class="chat-form">
+        <input
+            id="message-input"
+            type="text"
+            placeholder="Ask an agricultural question..."
+            autocomplete="off"
+            required
+        >
+        <button type="submit">Send</button>
+    </form>
+
+    <p class="notice">Development preview. AI responses are not connected yet.</p>
+</main>
+{% endblock %}
